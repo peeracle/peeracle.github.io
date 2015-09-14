@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>peeracle</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="assets/css/flag-icon.min.css">
+  <link rel="stylesheet" href="app.css">
+
+  <script src="assets/js/angular.js"></script>
+  <script src="assets/js/angular-ui-router.min.js"></script>
+  <script src="assets/js/ui-bootstrap-tpls-0.13.0.min.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-62532487-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <script src="assets/js/angulartics.min.js"></script>
+  <script src="assets/js/angulartics-ga.min.js"></script>
+</head>
+<body>
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+  your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="container">
+  <div class="row" style="margin-top: 40px; margin-bottom: 20px">
+    <div class="col-md-12" style="text-align: center">
+      <h1>peeracle</h1>
+
+      <!--<h3>Peer-to-peer assisted multimedia streaming in the browser,<br/>written in pure Javascript, no plugin required.</h3>-->
+    </div>
+  </div>
+  <!--<div class="row" style="margin-bottom: 40px; text-align: center">
+    <div class="col-sm-12">
+      <a role="button" class="btn btn-success btn-lg" style="min-width: 200px;"
+         href="https://github.com/peeracle/peeracle">
+        <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Download</a>
+
+      <a role="button" class="btn btn-info btn-lg disabled" style="min-width: 200px;">
+        <span class="glyphicon glyphicon-book" aria-hidden="true"></span> Documentation</a>
+    </div>
+  </div>-->
+  <div ng-cloak class="row" style="margin-bottom: 10px">
+    <div class="col-md-12">
+      <ul class="nav nav-pills">
+        <li role="presentation" ui-sref-active="active">
+          <a ui-sref="webmvideo">
+            <span class="glyphicon glyphicon-play" aria-hidden="true"></span> WebM Video</a>
+        </li>
+        <!--<li class="disabled" role="presentation" ui-sref-active="active">
+          <a ui-sref="mp4video">
+            <span class="glyphicon glyphicon-film" aria-hidden="true"></span> MP4 Video</a>
+        </li>
+        <li class="disabled" role="presentation" ui-sref-active="active">
+          <a ui-sref="mp3audio">
+            <span class="glyphicon glyphicon-music" aria-hidden="true"></span> MP3 Audio</a>
+        </li>
+        <li class="disabled" role="presentation" ui-sref-active="active">
+          <a ui-sref="adaptive">
+            <span class="glyphicon glyphicon-signal" aria-hidden="true"></span> Adaptive</a>
+        </li>
+        <li class="disabled" role="presentation" ui-sref-active="active">
+          <a ui-sref="stream">
+            <span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span> Stream your media</a>
+        </li>
+        <li role="presentation" ui-sref-active="active" style="float: right;">
+          <a ui-sref="settings">
+            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Settings</a>
+        </li>-->
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12" ui-view>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+<script src="views/adaptive/view.js"></script>
+<script src="views/mp3audio/view.js"></script>
+<script src="views/mp4video/view.js"></script>
+<script src="views/settings/view.js"></script>
+<script src="views/stream/view.js"></script>
+<script src="views/webmvideo/view.js"></script>
+
+<!--
+<script src="https://cdn.rawgit.com/peeracle/peeracle/master/dist/peeracle-0.0.2.js"></script>
+-->
+<script src="assets/js/peeracle-0.0.2.js"></script>
+</body>
+</html>
