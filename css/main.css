@@ -1,0 +1,1310 @@
+/* --------------------------------------
+=========================================
+Flat Vault - Multipurpose Landing Page
+Version: 1.0
+Designed By: CreativeCary
+=========================================
+-----------------------------------------
+
+1. GLOABL-CSS
+	1.1 GENERAL-CSS
+	1.2 TYPOGRAPHY
+
+2. MASTER COLOR SETTINGS (TO CHANGE ENTIRE THEME)
+	2.1 BACKGROUND COLOR SETTINGS
+	2.2 BORDER COLOR SETTINGS
+	2.3 TEXT COLOR SETTINGS 
+
+3. PRELOADER
+	3.1 LOADING
+	3.2 LOADING ANIMATION
+	
+4. SECTIONS-CSS
+	4.1 SECTION WHITE
+	4.2 SECTION RED
+	
+5. HEADER-SECTION
+	5.1 HEADER LEFT
+	5.2 HEADER RIGHT
+
+6. ADVERTISED-SECTION
+	6.1 BASIC STYLE
+	6.2 ARROW LEFT AND DOWN
+
+7. FEATURE-SECTION
+	7.1 BASIC STYLE
+	7.2 FEATURE LIST
+	7.3 PHONE IMAGE
+	
+8. DESIGNE-SECTION
+
+9. BENIFITS-SECTION
+
+10. CLIENT-SECTION
+
+11. PRICE-SECTION
+	11.1 BASIC STYLE
+	11.2 PRICE COLUMN
+	11.3 PRICE RED COLUMN
+	
+12. SUBSCRIBE-SECTION
+	12.1 BASIC STYLE
+	12.2 NEWSLETTER
+	12.3 SOCIAL MEDIA
+
+13. FOOTER-SECTION
+
+14. RESPONSIVE FIXES
+	14.1 FOR MAXIMUM WIDTH 992PX
+	14.2 FOR MAXIMUM WIDTH 768PX
+	14.3 FOR MAXIMUM WIDTH 380PX
+
+	
+-----------------------------------------*/
+
+/* --------------------------------------
+=========================================
+   1. GLOABL - CSS
+=========================================
+-----------------------------------------*/
+
+/*---------------------------------------
+   1.1 IMPORT GOOGLE WEBFONT               
+-----------------------------------------*/
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+
+/*---------------------------------------
+   1.2 GENERAL - CSS               
+-----------------------------------------*/
+
+body {
+	background: #eeeff1;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px; /* PIXEL FALLBACK */
+	font-size: 1.6rem;
+	line-height: 1.5;
+	color: #8f96a9;
+	padding-top: 74px;
+}
+
+/*---------------------------------------
+   1.3 TYPOGRAPHY               
+-----------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'lato', sans-serif;
+	color: #153758;
+}
+
+h1 {
+	font-size: 48px; /* PIXEL FALLBACK */
+	font-size: 4.8rem;
+}
+
+h2 {
+	font-size: 36px; /* PIXEL FALLBACK */
+	font-size: 3.6rem;
+	font-weight:bold;
+	margin-top:0;
+}
+
+h3 {
+	font-size: 22px; /* PIXEL FALLBACK */
+	font-size: 2.2rem;
+	font-weight: bold;
+}
+h4 {
+	font-size: 26px; /* PIXEL FALLBACK */
+	font-size: 2.6rem;
+	font-weight: bold;
+}
+
+/* --------------------------------------
+=========================================
+   2. MASTER COLOR SETTINGS
+=========================================
+-----------------------------------------*/
+
+/*---------------------------------------
+   2.1 BACKGROUND COLOR SETTINGS               
+-----------------------------------------*/
+#object,
+h2.form-title,
+button,
+.submit-btn,
+.advertised.red,
+.feature-bullet,
+.red-bg,
+.price-bg.red,
+.separator.red,
+.price-bg .price-seprator.red,
+.newsletter-button,
+ul.social-icons li a{
+	background: #1f68a2;
+	}
+
+button:hover,
+.submit-btn:hover,
+.newsletter-button:hover,
+ul.social-icons li a:hover{
+	background: #1b507d;
+	}
+
+/*---------------------------------------
+   2.2 BORDER COLOR SETTINGS               
+-----------------------------------------*/
+.logo img {
+    border-color: #1f68a2;
+}
+.verticle-line{
+	  border-color: #1f68a2 !important;
+}
+.arrow-left{
+	  	border-left:10px solid #1f68a2 !important;
+}
+.arrow-down{
+	border-top: 25px solid #1f68a2 !important;
+}
+
+/*---------------------------------------
+   2.3 TEXT COLOR SETTINGS               
+-----------------------------------------*/
+
+.price-circle span,
+ a{
+	color: #1f68a2;
+}
+
+a:hover {
+	color: #1b507d;
+}
+
+/* --------------------------------------
+=========================================
+   3. PRELOADER
+=========================================
+-----------------------------------------*/
+
+/*---------------------------------------
+   3.1 LOADING               
+-----------------------------------------*/
+
+#loading{
+	background:#eeeff1;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 9999;
+	margin-top: 0px;
+	top: 0px;
+}
+#loading-center{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+#loading-center-absolute {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 200px;
+	width: 200px;
+	margin-top: -100px;
+	margin-left: -100px;
+}
+#object{
+	width: 30px;
+	height: 30px;
+	-webkit-animation: animate 1s infinite ease-in-out;
+	animation: animate 1s infinite ease-in-out;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 60px;
+}
+
+/*---------------------------------------
+   3.2 LOADING ANIMATION               
+-----------------------------------------*/
+
+@-webkit-keyframes animate {
+  0% { -webkit-transform: perspective(160px); }
+  50% { -webkit-transform: perspective(160px) rotateY(-180deg); }
+  100% { -webkit-transform: perspective(160px) rotateY(-180deg) rotateX(-180deg); }
+}
+
+@keyframes animate {
+  0% {
+    transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+  } 50% {
+    transform: perspective(160px) rotateX(-180deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(0deg) ;
+  } 100% {
+    transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+  }
+}
+
+
+/* --------------------------------------
+=========================================
+   4. SECTIONS-CSS
+=========================================
+-----------------------------------------*/
+
+/*---------------------------------------
+   4.1 SECTION WHITE               
+-----------------------------------------*/
+
+section{
+	margin-top:30px;
+	text-align:center;
+	}
+
+article{
+	margin: 0 30px 0 30px;
+}
+
+.white-bg {
+	width:100%;
+	background: #fff;
+	padding-top:50px;
+	padding-bottom:50px;
+	float:left;
+}
+
+.blog-bg {
+	width:100%;
+	background: #fff;
+	float:left;
+}
+
+.misc-bg {
+	width:100%;
+	background: #fff;
+	padding-top:25px;
+	padding-bottom:25px;
+	padding-left:30px;
+	float:left;
+}
+
+.separator {
+	background: #fff;
+	display: inline-block;
+	height: 4px;
+	margin-top: 21px;
+	width: 80px;
+}
+
+section p {
+	color: #8f96a9;
+	margin: 23px 0 0;
+}
+
+/*---------------------------------------
+   4.2 SECTION RED               
+-----------------------------------------*/
+
+.red-bg {
+	width:100%;
+	padding-top:50px;
+	padding-bottom:50px;
+	float:left;
+}
+
+.red-bg h2 {
+	color:#FFFFFF;
+	font-size: 36px; /* PIXEL FALLBACK */
+	font-size:3.6rem;
+	font-weight: bold;
+}
+.red-bg p {
+	color: #fff;
+}
+
+
+/* --------------------------------------
+=========================================
+   5. HEADER-SECTION
+=========================================
+-----------------------------------------*/
+.jumbotron {
+	background: url(../img/texture.jpg);
+	/* min-height: 720px; */
+	margin-bottom:0;
+}
+
+/*---------------------------------------
+   5.1 HEADER LEFT               
+-----------------------------------------*/
+
+.verticle-line {
+	border-left: 4px solid;
+	border-color:#1f68a2;
+	margin: 0;
+	padding: 0 0 0 19px;
+}
+
+.jumbotron {
+	text-align:left;
+}
+.social-icons-align{
+	text-align:right;
+	padding: 10px 0 10px;
+	height: 68px;
+	}
+.jumbotron h1 {
+	font-size: 48px; /* PIXEL FALLBACK */
+	font-size: 4.8rem;
+}
+.jumbotron h1 span {
+	width:380px;
+	text-align:right;
+}
+.jumbotron h2 {
+	font-size:28px; /* PIXEL FALLBACK */
+	font-size:2.8rem;
+	font-weight:normal;
+}
+
+.jumbotron p {
+	font-size: 18px; /* PIXEL FALLBACK */
+	font-size: 1.8rem;
+	margin: 25px 0;
+}
+
+button.view-detail  {
+	width: 250px;
+}
+
+/*---------------------------------------
+   5.2 HEADER RIGHT               
+-----------------------------------------*/
+
+#demo {
+	width: 100%;
+	padding-top: 56.25%;
+}
+
+.transparent {
+	opacity: 0;
+}
+
+/* --------------------------------------
+=========================================
+   6. ADVERTISED-SECTION
+=========================================
+-----------------------------------------*/
+
+/*---------------------------------------
+   6.1 BASIC STYLE               
+-----------------------------------------*/
+.advertised-section {
+	background: #243842;
+	padding: 50px 0;
+	margin-top:0;
+}
+
+.advertised {
+	background: #374d5b;
+}
+
+.advertised.red {
+	position: relative;
+}
+
+.advertised.red p {
+	line-height: 73px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #fff;
+	width: 100%;
+	margin: 0px;
+	text-align: center;
+}
+
+.advertised p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #fff;
+	width: 100%;
+	margin: 0px;
+	text-align: center;
+}
+
+.advertised a {
+	color: #21b6f2;
+}
+
+/*---------------------------------------
+   6.2 ARROW LEFT AND DOWN               
+-----------------------------------------*/
+.arrow-left {
+	position: absolute;
+	right: -10px;
+	top: 23px;
+	width: 0;
+	height: 0;
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-left:10px solid #1f68a2;
+}
+
+.arrow-down-2 {
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-top: 10px solid #1f68a2;
+	top:75px;
+	left:48%;
+	position:absolute;
+	display:none;
+}
+
+/* --------------------------------------
+=========================================
+   7. FEATURE-SECTION
+=========================================
+-----------------------------------------*/
+
+/*---------------------------------------
+   7.1 BASIC STYLE               
+-----------------------------------------*/
+.feature-section {
+	text-align:left;
+}
+
+.latest-posts {
+	margin-top: 0;
+}
+
+section .verticle-line {
+	margin: 0;
+}
+
+/*---------------------------------------
+   7.2 FEATURE LIST              
+-----------------------------------------*/
+.feature-list {
+	padding: 0px;
+	float: left;
+	width: 100%;
+	margin: 47px 0 0;
+}
+
+.feature-list li {
+	list-style: none;
+	width: 100%;
+	float: left;
+	margin-bottom:15px;
+}
+
+.feature-bullet {
+	border-radius: 50%;
+	color: #fff;
+	font-size: 24px; /* PIXEL FALLBACK */
+	font-size: 2.4rem;
+	font-weight:bold;
+	height: 45px;
+	float:left;
+	line-height: 44px;
+	text-align: center;
+	width: 45px;
+}
+
+.feature-content {
+	width:70%;
+	margin-left:20px;
+	float:left;
+}
+
+.feature-list h3 {
+	margin: 0;
+}
+
+.feature-list p {
+	margin: 0px;
+}
+
+/*---------------------------------------
+   7.3 PHONE IMAGE              
+-----------------------------------------*/
+.phone-img {
+	text-align: right;
+}
+
+/* --------------------------------------
+=========================================
+   8. DESIGN-SECTION
+=========================================
+-----------------------------------------*/
+.laptop-img {
+	margin-top: 20px;
+	position: relative;
+}
+
+.slider {
+	height: 306px;
+	left: 0;
+	margin: auto;
+	position: absolute;
+	right: 0;
+	top: 34px;
+	width: 482px;
+	z-index: 0;
+}
+.carousel-control.left {
+    background-image:none;
+}
+.carousel-control.right {
+    background-image:none;
+}
+/* --------------------------------------
+=========================================
+   9. BENIFITS-SECTION
+=========================================
+-----------------------------------------*/
+.benifit-icon{
+	margin: 30px 0 0;
+	text-align: center;
+}
+
+/* --------------------------------------
+=========================================
+   10. CLIENT SECTION
+=========================================
+-----------------------------------------*/
+.client-img {
+	float: left;
+	margin: 0px 0 0 30px;
+}
+
+.client-saying {
+	float: left;
+	margin: 10px 0 0 25px;
+	padding: 0 0 0 29px;
+	width: 75%;
+	text-align:left;
+    border-left: 5px solid #FFF;
+}
+
+.client-saying p {
+	font-style: italic;
+	margin: 0px;
+}
+
+.client-saying h3 {
+	color: #fff;
+	margin-bottom:0;
+}
+
+/* --------------------------------------
+=========================================
+   11. PRICE-SECTION
+=========================================
+-----------------------------------------*/
+
+/*---------------------------------------
+   11.1 PRICE COLUMN              
+-----------------------------------------*/
+.price-bg {
+	width:100%;
+	background: #fff;
+	text-align:center;
+	padding:50px 0;
+	float:left;
+}
+
+.price-circle {
+	width: 165px;
+	height: 165px;
+	line-height: 160px;
+	background: #ededed;
+	border-radius: 50%;
+	color: rgb(71, 77, 86);
+	display: inline-block;
+	font-size: 60px; /* PIXEL FALLBACK */
+	font-size: 6rem;
+	font-weight: bold;
+	position: relative;
+	margin-bottom:20px;
+}
+
+.price-circle span {
+	background: #ededed;
+	border-radius: 50%;
+	font-size: 30px; /* PIXEL FALLBACK */
+	font-size: 3rem;
+	font-weight: normal;
+	height: 50px;
+	left: -5px;
+	line-height: 50px;
+	margin: 16px 0 0;
+	position: absolute;
+	width: 50px;
+}
+
+.price-seprator {
+	display: inline-block;
+	height: 4px;
+	margin: 20px 0 0;
+	width: 78px;
+}
+
+ul.price-list {
+	padding: 0px;
+	margin: 13px 0 0;
+	width: 100%;
+}
+
+ul.price-list li {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	color: #8f96a9;
+	font-size: 18px; /* PIXEL FALLBACK */
+	font-size: 1.8rem;
+	line-height: 42px;
+}
+
+.price-btn{
+	display: inline-block;
+	margin-top: 37px;
+	color: #fff;
+}
+
+/*---------------------------------------
+   11.2 PRICE RED COLUMN               
+-----------------------------------------*/
+.price-bg.red .price-seprator {
+	background: #fff;
+}
+
+.price-bg.red h4 {
+	color: #fff;
+}
+
+.price-bg.red ul.price-list li {
+	color: #fff;
+}
+
+.price-bg.red .price-btn {
+	background: #fff;
+	color: rgb(71, 77, 86);
+}
+
+.price-bg.red .price-btn:hover {
+	background: #ededed;
+}
+
+.price-bg.red .price-circle span {
+	background: #fff;
+}
+
+.price-bg.red .price-circle {
+	background: #fff;
+}
+/* --------------------------------------
+=========================================
+   12. SUBSCRIBE-SECTION
+=========================================
+-----------------------------------------*/
+
+/*---------------------------------------
+   12.1 BASIC STYLE               
+-----------------------------------------*/
+.subscribe-bg {
+	background: url(../img/texture.jpg);
+	padding:50px 0;
+}
+
+.subscribe-bg h2 {
+	color: #fff;
+}
+
+.subscribe-bg p {
+	color: #fff;
+}
+
+/*---------------------------------------
+   12.2 NEWSLETTER               
+-----------------------------------------*/
+.newsletter {
+	display: inline-block;
+	margin: 28px 0;
+	width: 635px;
+}
+
+.newsletter-input {
+	float: left;
+	border: none;
+	background: #fff;
+	padding: 0;
+	height: 50px;
+	padding: 0 10px;
+	width: 76%;
+	color: #8f96a9;
+	font-size: 14px;
+}
+
+.newsletter-button {
+	font-size: 15px;
+	color: #fff;
+	border: none;
+	width: 24%;
+	height: 50px;
+	float: right;
+}
+
+.newsletter-button:hover {
+	background: #1b507d;
+}
+
+#newsletter-error {
+	background:#e2574c;
+	color:#fff;
+	padding:15px;
+	margin-bottom:20px;
+	display:none;
+}
+
+
+#newsletter-success {
+	background:#42b089;
+	color:#fff;
+	padding:15px;
+	margin-bottom:20px;
+	display:none;
+}
+
+/*---------------------------------------
+   12.3 SOCIAL MEDIA              
+-----------------------------------------*/
+
+.social {
+	width: 100%;
+	float: left;
+}
+
+.social p {
+	color: #fff;
+	width: 100%;
+}
+
+ul.social-icons {
+	display: inline-block;
+	padding: 0px;
+	margin-top:20px;
+}
+
+ul.social-icons li {
+	display: inline-block;
+	list-style: none;
+	margin: 0 10px;
+}
+
+ul.social-icons li a {
+	width: 48px;
+	height: 48px;
+	float: left;
+	display: block;
+	border-radius: 3px;
+	line-height: 50px;
+	color: #fff;
+	text-align: center;
+	font-size: 32px;
+	text-decoration: none;
+}
+/* --------------------------------------
+=========================================
+   13. FOOTER-SECTION
+=========================================
+-----------------------------------------*/
+.copyright-section {
+	background: #17262d;
+	height: 100px;
+}
+
+.copyright-section p {
+	width: 100%;
+	padding-top:45px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	margin: 0px;
+}
+
+
+/* --------------------------------------
+=========================================
+   14. RESPONSIVE FIXES
+=========================================
+-----------------------------------------*/
+
+/*---------------------------------------
+   14.1 FOR MAXIMUM WIDTH 992PX              
+-----------------------------------------*/
+
+@media (max-width: 993px) {
+
+
+.jumbotron {
+	padding-bottom:50px;
+	text-align:center;
+}
+
+.social-icons-align{
+	text-align:center;
+	}
+
+.jumbotron .verticle-line {
+	border: none;
+	margin: 25px 0 0;
+	padding: 0;
+}
+
+.jumbotron p {
+	padding: 0;
+}
+
+button.view-detail {
+	width: 100%;
+}
+
+.arrow-down {
+	left:42%;
+}
+
+.detail-btn {
+	margin: 0 0 50px;
+}
+
+.col-md-3 .advertised {
+	margin:20px 0;
+}
+
+.arrow-left{
+	display:none;
+}
+
+.arrow-down-2 {
+	display:block;
+}
+
+.features-holder {
+	margin: 0;
+	padding: 30px 10px 0;
+}
+
+.phone-img {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.phone-img img {
+	max-width: 270px;
+	width: 90%;
+}
+
+.laptop-img > img {
+	display: none;
+}
+
+.slider {
+	top: 11px;
+	position: relative;
+}
+
+#benifits-holder p {
+	padding: 13px 15px 0;
+}
+
+.client-img {
+	margin: 0;
+	text-align: center;
+	width: 100%;
+	float:none;
+}
+
+.client-img > img {
+	border-bottom: 4px solid #fff;
+	padding: 0 0 25px;
+}
+
+.client-saying {
+	border-left: 0 none;
+	margin: 0;
+	padding: 20px 10px 0;
+	width: 100%;
+	text-align: center;
+	float:none;
+}
+
+.price-btn {
+	width: 90%;
+}
+
+.price-bg{
+	margin:10px 0;
+	}
+
+.newsletter {
+	width: 100%;
+}
+}
+
+/*---------------------------------------
+   14.2 FOR MAXIMUM WIDTH 768PX              
+-----------------------------------------*/
+
+@media(max-width:769px) {
+
+}
+
+/*---------------------------------------
+   14.2 FOR MAXIMUM WIDTH 480PX              
+-----------------------------------------*/
+
+@media(max-width:480px) {
+
+.jumbotron h1 span {
+	width:auto;
+	text-align:center;
+}
+.newsletter-input {
+	width: 66%;
+}
+
+.newsletter-button {
+	width: 34%;
+}
+
+}
+/*---------------------------------------
+   14.3 FOR MAXIMUM WIDTH 380PX              
+-----------------------------------------*/
+
+@media(max-width:381px) {
+
+.arrow-down {
+	left:38%;
+}
+
+.copyright-section p {
+	padding-top:35px;
+}
+
+}
+
+.highlight  { background: #ffffff; }
+.highlight .c { color: #999988; font-style: italic } /* Comment */
+.highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.highlight .k { font-weight: bold } /* Keyword */
+.highlight .o { font-weight: bold } /* Operator */
+.highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
+.highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.highlight .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #aa0000 } /* Generic.Error */
+.highlight .gh { color: #999999 } /* Generic.Heading */
+.highlight .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.highlight .gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #555555 } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #aaaaaa } /* Generic.Subheading */
+.highlight .gt { color: #aa0000 } /* Generic.Traceback */
+.highlight .kc { font-weight: bold } /* Keyword.Constant */
+.highlight .kd { font-weight: bold } /* Keyword.Declaration */
+.highlight .kp { font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr { font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #009999 } /* Literal.Number */
+.highlight .s { color: #d14 } /* Literal.String */
+.highlight .na { color: #008080 } /* Name.Attribute */
+.highlight .nb { color: #0086B3 } /* Name.Builtin */
+.highlight .nc { color: #445588; font-weight: bold } /* Name.Class */
+.highlight .no { color: #008080 } /* Name.Constant */
+.highlight .ni { color: #800080 } /* Name.Entity */
+.highlight .ne { color: #990000; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #990000; font-weight: bold } /* Name.Function */
+.highlight .nn { color: #555555 } /* Name.Namespace */
+.highlight .nt { color: #000080 } /* Name.Tag */
+.highlight .nv { color: #008080 } /* Name.Variable */
+.highlight .ow { font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #009999 } /* Literal.Number.Float */
+.highlight .mh { color: #009999 } /* Literal.Number.Hex */
+.highlight .mi { color: #009999 } /* Literal.Number.Integer */
+.highlight .mo { color: #009999 } /* Literal.Number.Oct */
+.highlight .sb { color: #d14 } /* Literal.String.Backtick */
+.highlight .sc { color: #d14 } /* Literal.String.Char */
+.highlight .sd { color: #d14 } /* Literal.String.Doc */
+.highlight .s2 { color: #d14 } /* Literal.String.Double */
+.highlight .se { color: #d14 } /* Literal.String.Escape */
+.highlight .sh { color: #d14 } /* Literal.String.Heredoc */
+.highlight .si { color: #d14 } /* Literal.String.Interpol */
+.highlight .sx { color: #d14 } /* Literal.String.Other */
+.highlight .sr { color: #009926 } /* Literal.String.Regex */
+.highlight .s1 { color: #d14 } /* Literal.String.Single */
+.highlight .ss { color: #990073 } /* Literal.String.Symbol */
+.highlight .bp { color: #999999 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #008080 } /* Name.Variable.Class */
+.highlight .vg { color: #008080 } /* Name.Variable.Global */
+.highlight .vi { color: #008080 } /* Name.Variable.Instance */
+.highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+
+.post > .highlight .lineno { color: #ccc; display:inline-block; padding: 0 5px; border-right:1px solid #ccc; }
+.post > .highlight pre code { display: block; white-space: pre; overflow-x: auto; word-wrap: normal; }
+
+.logo img {
+	width: 159px;
+	height: 48px;
+	margin-top: 5px;
+}
+
+.navbar {
+	padding: 10px 0 10px 0;
+	margin-bottom: 0;
+	border: 0;
+}
+
+.navbar-fixed-top {
+	-webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.25);
+	box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.25);
+}
+
+.navbar-nav > li > a {
+    padding-top:22px !important;
+    padding-bottom:22px !important;
+}
+
+.navbar-default {
+	background-color: #eeeff1;
+}
+
+.vjs-default-skin .vjs-big-play-button
+{
+	top: 75%;
+	left: 50%;
+	margin: -22.5px auto auto -45px;
+}
+
+.videojs-hero-overlay {
+	position: absolute;
+	text-align: center;
+	top: 37.79%;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: rgba(238, 239, 241, 0.9);
+	color: #153758;
+	-webkit-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+}
+
+.videojs-hero-overlay .videojs-hero {
+	margin: 2%;
+}
+
+.videojs-hero-overlay .videojs-hero .logo {
+	width: 25%;
+	margin: 0 auto;
+}
+
+.videojs-hero-overlay .videojs-hero .subhead {
+	margin: 1%;
+	font-size: 1.25vw;
+	vertical-align: middle;
+	line-height: 1.5vw;
+}
+
+.videojs-hero-overlay .videojs-hero a {
+	line-height: 3.5vw;
+}
+
+.videojs-peeracle-overlay {
+	position: absolute;
+	top: 12.5%;
+	left: 0;
+    width: 100%;
+    height: 75%;
+    padding-left: 15px;
+    padding-right: 15px;
+	background-color: rgba(0, 0, 0, 0.6);
+	color: #ffffff;
+}
+
+.videojs-peeracle-overlay .transparent {
+	display: none;
+	-webkit-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+}
+
+.videojs-peeracle-overlay .vjs-fullscreen {
+	display: none;
+	-webkit-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+}
+
+.video-js {
+	position: relative !important;
+	width: 100% !important;
+	height: auto !important;
+}
+
+.vjs-poster {
+	position: absolute !important;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.vjs-fullscreen {padding-top: 0px}
+
+.schema {
+	width: 100%;
+}
+
+ul {
+	margin-top: 23px;
+	margin-bottom: 0;
+}
+
+.h3 .post-title {
+	display: inline-block;
+}
+
+.h3 .post-date {
+	float: right;
+	font-style: italic;
+	padding: 0.2em 1em;
+}
+
+.platforms a {
+	width: 64px;
+	height: 64px;
+	display: block;
+	border-radius: 3px;
+	line-height: 64px;
+	color: #fff;
+	text-align: center;
+	font-size: 48px;
+	text-decoration: none;
+}
+
+.platforms {
+	/*padding-left: 0;
+	list-style: none;
+	margin-bottom: 5px;
+	text-align: center;*/
+	margin-top:47px;
+	float:left;
+	width:100%;
+	overflow:hidden;
+	position:relative;
+}
+
+.platforms ul {
+	float:left;
+	list-style:none;
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+
+.platforms li {
+	display:block;
+	float:left;
+	list-style:none;
+	margin:0 20px 20px 0;
+	padding:0;
+}
+
+.platformicon-js {
+	color: #4b555a!important;
+	background: #f5c912;
+}
+
+.platformicon-apple {
+	font-size: 38px;
+	background: #4b555a;
+	line-height: 54px;
+}
+
+.platformicon-node-js {
+	background: #9dc67b;
+	color: #385223;
+}
+
+.platformicon-java {
+	background: #e74a51;
+}
+
+.icon-firefox {
+	background: #d15327;
+}
+.icon-terminal {
+	background: #4b555a;
+}
+.icon-android {
+	background: #9dc67b;
+}
+.icon-chrome {
+	background: #405b76;
+}
+
+.navbar-nav > li > a {
+	color: #fff !important;
+	font-size: 18px;
+	line-height: 44px;
+	text-align: center;
+	border:none;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 15px;
+	padding-left: 25px;
+	padding-right: 25px;
+	background: #1f68a2;
+}
+
+.navbar-nav > li > a.download-btn {
+	background: #7fa85d;
+}
+
+.navbar-nav > li > a.download-btn:hover {
+	background: #6c944b !important;
+}
+
+.navbar-nav > li > a.docs-btn {
+	background: #405b76;
+}
+
+.navbar-nav > li > a.docs-btn:hover {
+	background: #2c3f59 !important;
+}
+
+.navbar-right {
+	margin-right: 0px;
+}
+
+.navbar-nav > li > a:hover {
+	background: #1b507d !important;
+}
