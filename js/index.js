@@ -21,10 +21,12 @@ setTimeout(function () {
 }, 250);
 
 player.on('play', function () {
+  ga('send', 'event', 'Video', 'play', 'peeracle.mp4');
   $heroBanner.addClass('transparent');
 });
 
 player.on('pause', function () {
+  ga('send', 'event', 'Video', 'pause', 'peeracle.mp4');
   $heroBanner.removeClass('transparent');
 });
 
